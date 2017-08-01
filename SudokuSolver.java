@@ -6,6 +6,7 @@ public class SudokuSolver
     public static void main(String args[])
     {
 	Scanner sc = new Scanner(System.in);
+	SudokuSolver obj = SudokuSolver();
 	char[][] board = new char[9][9];
 
 	System.out.println("Enter the Sudoku Puzzle elements. Insert '.' for a blank character");
@@ -14,9 +15,9 @@ public class SudokuSolver
 	    for(int j=0; j<9; j++)
 		board[i][j] = sc.next(".").charAt(0);
 
-	if(isValidSudoku(board))
+	if(obj.isValidSudoku(board))
 	{
-	    solveSudoku(board);
+	    obj.solveSudoku(board);
 
 	    for(int i=0; i<9; i++)
 	    {
